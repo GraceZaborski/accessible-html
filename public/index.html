@@ -1,43 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="utf-8">
+    <link rel = "shortcut icon" type="image/jpeg" href = "logo-london-underground.jpeg">
+    <title>South Hampstead Community Page</title>
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+<div id="skipnav"><a href="#mainContent">Skip navigation</a></div>
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+  <header>
+    <h1>South Hampstead Community Page</h1>
+    <p>A page to explore the community of South Hampstead. From classic British pubs to London's most famous parks, you'll never get bored!</p>
+  </header>
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
+  <nav>
+<ul>
+  <li><a href=#top-things-list>Top things to do nearby</a></li>
+  <li><a href=#french-saying>Communicating here in French</a></li>
+  <li><a href=#population-table>South Hampstead Population</a></li>
+</ul>
+  </nav>
+
+  <main id="mainContent">
+    <h2 id="top-things-list">Top things to do nearby</h2>
+    <ul>
+    <li>Hampstead Heath</li>
+    <li>Regents Park</li>
+    <li>Camden Town</li>
+    <li>Belsize Park</li>
+    <li>Maida Vale</li>
+  </ul>
+
+  <h1>Communicating here in French</h1>
+  <p id="french-saying">If you were to say you lived in South Hampstead in French it would be: &quot;<span lang="fr">J'habite a South Hampstead</span>&quot;</p>
+  
+  <h2 id="population-table">South Hampstead Population in 2021/22</h2>
+  <p id="population-description">A table showing the population increase in two areas in South Hampstead from 2021 to 2022.</p>
+  <p><span class="visually-hidden">Important:</span> the majority of the people here do not speak French.</p>
+  <table aria-labelledby="population-table" aria-describedby="population-description">
+    <!-- <caption id="population-table">South Hampstead Population in 2021/22</caption> -->
+     <thead>
+       <tr>
+         <!--headers which cannot be associated with scope must use headers and id-->
+         <td rowspan="2">&nbsp;</td>
+         <th colspan="2" scope="colgroup">Area</th>
+       </tr>
+     <tr>
+        <td>&nbsp;</td>
+        <th scope="col">Swiss Cottage</th>
+        <th scope="col">Belsize Park</th>
+     </tr>
+     </thead>
+     <tbody>
+     <tr>
+      <th rowspan="2" scope="rowgroup">Year</th>
+      <th scope="row">2021</th>
+        <td>150,000</td>
+        <td>120,000</td>
+     </tr>
+      <tr>
+         <th scope="row">2022</th>
+         <td>160,000</td>
+         <td>140,000</td>
+      </tr>
+      </tbody>
+  </table>
+  
+  <p>
+    <a href="https://dequeuniversity.com" target="_blank">Deque training 
+      <img src="newWindow.png" alt="opens new window" width="16" height="16">
+    </a>
+  </p>
+</main>
+
+<footer>
+  <p>Copyright @Grace</p>
+</footer>
   </body>
 </html>
